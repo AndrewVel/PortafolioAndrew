@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import swal from "sweetalert";
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -9,13 +10,21 @@ const Contact = () => {
   const [done, setDone] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(e);
+    // Validar los campos del formulario
+    const name = form.current.user_name.value;
+    const email = form.current.user_email.value;
+    const message = form.current.message.value;
+    if (!name || !email || !message) {
+      swal("Por favor, complete todos los campos obligatorios");
+      return;
+    }
     emailjs
       .sendForm(
         "service_157o58q",
-        "template_m5udu2c",
+        "template_30rvurg",
         form.current,
-        "VLwg1ltOWvnCYAiK_"
+        "19GE7eMLk4jvIO09D"
       )
       .then(
         (result) => {
@@ -24,6 +33,7 @@ const Contact = () => {
           form.reset();
         },
         (error) => {
+          alert(error.text);
           console.log(error.text);
         }
       );
@@ -35,8 +45,10 @@ const Contact = () => {
       <div className="w-left">
         <div className="awesome">
           {/* darkMode */}
-          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
-          <span>Contact me</span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Ponerse en Contacto
+          </span>
+          <span>Contáctame</span>
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -60,7 +72,8 @@ const Contact = () => {
           />
           <textarea name="message" className="user" placeholder="Message" />
           <input type="submit" value="Send" className="button" />
-          <span>{done && "Thanks for Contacting me"}</span>
+
+          <span>{done && "Gracias por contactarme"}</span>
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}

@@ -7,7 +7,6 @@ import CountriesPi from "../../img/COUNTRIES PI.png";
 import RYM from "../../img/RYM.png";
 import Guano from "../../img/GUNAO.png";
 import { themeContext } from "../../Context";
-import { Button } from "react-scroll";
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;

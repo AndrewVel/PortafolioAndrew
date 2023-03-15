@@ -5,19 +5,12 @@ import comunicacion from "../../img/comunicacion.png";
 import equipo from "../../img/equipo.png";
 import solucion from "../../img/solucion.png";
 import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
 import Resume from "./Andres Velata CV.pdf";
 
 const Services = () => {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-
-  // transition
-  const transition = {
-    duration: 1,
-    type: "spring",
-  };
 
   return (
     <div className="services" id="services">
@@ -37,15 +30,15 @@ const Services = () => {
         <div>
           <h1 className="softTitle">Soft Skills</h1>
           <div className="divSoft">
-            <img src={solucion} />
+            <img src={solucion} alt="" />
             <span>Resolucion de Problemas</span>
           </div>
           <div className="divSoft">
-            <img src={equipo}></img>
+            <img src={equipo} alt=""></img>
             <span>Trabajo en Equipo</span>
           </div>
           <div className="divSoft">
-            <img src={comunicacion}></img>
+            <img src={comunicacion} alt=""></img>
             <span>Comunicacion Efectiva</span>
           </div>
         </div>
