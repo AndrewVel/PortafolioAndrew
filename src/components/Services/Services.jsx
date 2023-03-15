@@ -26,10 +26,10 @@ const Services = () => {
         {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>Mis Habilidades</span>
         <span>y Actitudes</span>
-        <spane>
+        <span>
           Aquí podrás conocer más acerca de mis habilidades técnicas
           <br />y mis habilidades
-        </spane>
+        </span>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
         </a>

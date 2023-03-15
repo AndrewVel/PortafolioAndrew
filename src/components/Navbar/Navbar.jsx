@@ -21,23 +21,23 @@ const navbar = () => {
             </li>
             <li>
               <Link to="services" spy={true} smooth={true}>
-                Serivces
+                Servicios
               </Link>
             </li>
             <li>
               <Link to="experience" spy={true} smooth={true}>
-                Experience
+                Experiencia
               </Link>
             </li>
             <li>
               <Link to="portfolio" spy={true} smooth={true}>
-                Protfolio
+                Portafolio
               </Link>
             </li>
           </ul>
         </div>
         <Link to="contact" spy={true} smooth={true}>
-          <button className="button n-button">Contact</button>
+          <button className="button n-button">Contacto</button>
         </Link>
       </div>
     </div>

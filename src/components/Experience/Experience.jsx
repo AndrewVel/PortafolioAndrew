@@ -40,7 +40,7 @@ const Experience = () => {
             5
           </div>
           <span style={{ color: darkMode ? "white" : "" }}>proyectos</span>
-          <span>Propios</span>
+          <span>Totales</span>
         </div>
         <div className="achievement">
           <div
