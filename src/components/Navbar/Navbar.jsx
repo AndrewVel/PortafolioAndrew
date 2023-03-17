@@ -4,18 +4,18 @@ import "./Navbar.css";
 import { Link } from "react-scroll";
 const navbar = () => {
   return (
-    <div className="n-wrapper" id="Navbar">
+    <div className="n-wrapper" id="Navbar" spy={true} smooth={true}>
       {/* left */}
       <div className="n-left">
-        <div className="n-name">AndrewDev</div>
         <Toggle />
+        <div className="n-name">AndrewDev</div>
       </div>
       {/* right */}
       <div className="n-right">
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
             <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
+              <Link to="Intro" spy={true} smooth={true}>
                 Home
               </Link>
             </li>
@@ -25,13 +25,13 @@ const navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="experience" spy={true} smooth={true}>
-                Experiencia
+              <Link to="portfolio" spy={true} smooth={true}>
+                Portafolio
               </Link>
             </li>
             <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Portafolio
+              <Link to="experience" spy={true} smooth={true}>
+                Experiencia
               </Link>
             </li>
           </ul>

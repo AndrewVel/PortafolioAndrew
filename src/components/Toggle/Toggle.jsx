@@ -19,7 +19,7 @@ const Toggle = () => {
                                           krna hy pehly */}
       <div
         className="t-button"
-        style={darkMode ? { left: "2px" } : { right: "2px" }}
+        style={darkMode ? { top: "2px" } : { bottom: "2px" }}
       ></div>
     </div>
   );

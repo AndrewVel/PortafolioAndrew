@@ -74,14 +74,14 @@ const Intro = () => {
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
+          whileInView={{ left: "-10%" }}
           transition={transition}
           src={glassesimoji}
           alt=""
         />
 
         <motion.div
-          initial={{ top: "-4%", left: "74%" }}
+          initial={{ left: "9rem", top: "18rem" }}
           whileInView={{ left: "68%" }}
           transition={transition}
           className="floating-div"
