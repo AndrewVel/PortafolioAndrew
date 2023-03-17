@@ -25,4 +25,7 @@
   .f-content {
     transform: scale(0.5);
   }
+  .footer {
+    display: none;
+  }
 }

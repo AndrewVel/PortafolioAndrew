@@ -17,7 +17,7 @@
 .c-right > form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -46,8 +46,12 @@ textarea {
     flex-direction: column;
     gap: 5rem;
     height: 40rem;
+    margin-bottom: -12rem;
   }
   .c-right .user {
     width: 16rem;
+  }
+  .c-right {
+    margin-top: -2rem;
   }
 }
