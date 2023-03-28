@@ -47,6 +47,7 @@ textarea {
     gap: 5rem;
     height: 40rem;
     margin-bottom: -12rem;
+    margin-top: -2rem;
   }
   .c-right .user {
     width: 16rem;

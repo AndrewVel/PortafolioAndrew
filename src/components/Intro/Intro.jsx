@@ -30,13 +30,8 @@ const Intro = () => {
             ¡Hola mundo! Soy
           </span>
           <span>Andres Velata</span>
-          <span>
-            Soy un ingeniero TI con 8 años de experiencia y estoy en proceso de
-            convertirme en un desarrollador Full-Stack. En mi sitio web
-            encontrarás proyectos que reflejan mi experiencia en TI y mi
-            progreso en el aprendizaje de las habilidades necesarias para ser un
-            desarrollador Full-Stack.
-          </span>
+          <span></span>
+          <span>Full stack developer | IT Engineer | UI lover</span>
         </div>
         <a href="https://wa.me/593995576883?text=Hola%20Andrew">
           <button className="button i-button">Escríbeme</button>

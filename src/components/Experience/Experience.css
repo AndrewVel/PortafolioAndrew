@@ -10,6 +10,10 @@
   color: var(--black);
   font-size: 2rem;
   font-weight: bold;
+  margin-top: -2rem;
+}
+.letrasMobile {
+  display: none;
 }
 
 .experience {
@@ -18,20 +22,28 @@
   justify-content: center;
   gap: 5rem;
   height: 30vh;
-  margin-top: -10rem;
+  margin-top: -13rem;
   margin-bottom: 9rem;
   /* darkmode */
   color: var(--black);
-  padding-top: 15rem;
+  padding-top: 13rem;
 }
+
+.circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
 .achievement {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .circle {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   background: white;
   border-radius: 100%;
   position: relative;
@@ -45,7 +57,7 @@
 .circle::before {
   border-radius: 100%;
   content: "";
-  background-image: linear-gradient(to bottom, #87e6fb 0%, #ffc05c 100%);
+  background-image: linear-gradient(to bottom, #87e6fb 0%, #010231 100%);
   top: -8px;
   left: -8px;
   bottom: -8px;
@@ -58,7 +70,18 @@
 .achievement span:nth-of-type(2) {
   color: var(--orange);
 }
-
+.glassLanding {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: white;
+  background: rgb(2, 2, 43);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(55px);
+  border: 1.5px solid var(--orange);
+}
 @media screen and (max-width: 480px) {
   .experience {
     transform: scale(0.7);
@@ -67,5 +90,20 @@
   }
   .portfolio2 h1:nth-of-type(1) {
     display: none;
+  }
+  .textolandig2 {
+    display: none;
+  }
+  .textolandig1 {
+    display: none;
+  }
+  .letrasMobile {
+    display: flex;
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+    height: 100px;
+    position: relative;
+    top: -300px;
   }
 }

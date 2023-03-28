@@ -28,7 +28,9 @@ const Services = () => {
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
         <div>
-          <h1 className="softTitle">Soft Skills</h1>
+          <h1 className="softTitle" style={{ color: darkMode ? "white" : "" }}>
+            Soft Skills
+          </h1>
           <div className="divSoft">
             <img src={solucion} alt="" />
             <span>Resolucion de Problemas</span>
@@ -45,7 +47,9 @@ const Services = () => {
       </div>
       {/* right */}
       <div className="skillsAll">
-        <h3 className="softTitle">Principales Tech Skills</h3>
+        <h3 className="softTitle" style={{ color: darkMode ? "white" : "" }}>
+          Principales Tech Skills
+        </h3>
         <div className="principalesTech">
           <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
             <img
@@ -73,7 +77,9 @@ const Services = () => {
           </a>
         </div>
 
-        <h3 className="softTitle2">Otras Tech Skills</h3>
+        <h3 className="softTitle2" style={{ color: darkMode ? "white" : "" }}>
+          Otras Tech Skills
+        </h3>
         <div className="otrasSoft">
           <p align="left">
             <a

@@ -1,7 +1,7 @@
 .Intro {
   display: flex;
   height: 77vh;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 
 /* left side styling */
@@ -40,12 +40,14 @@
 .i-icons {
   display: flex;
   gap: 0rem;
+  transition: all 0.5s;
 }
 .i-icons > * {
   transform: scale(0.4);
 }
 .i-icons > *:hover {
   cursor: pointer;
+  transform: scale(0.45);
 }
 /* right side styling */
 .i-right {
@@ -99,7 +101,7 @@
 @media screen and (max-width: 480px) {
   .Intro {
     flex-direction: column;
-    gap: 7rem;
+    gap: 5rem;
     height: 64rem;
   }
 
@@ -112,6 +114,13 @@
   }
   .floating-div:nth-of-type(1) {
     /* display: none; */
-    top: -7rem !important;
+    top: 12rem !important;
+  }
+  .i-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .i-icons > * {
+    margin: -10px;
   }
 }
