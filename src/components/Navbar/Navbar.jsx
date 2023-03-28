@@ -31,7 +31,7 @@ const navbar = () => {
             </li>
             <li>
               <Link to="experience" spy={true} smooth={true}>
-                Experiencia
+                Sobre Mi
               </Link>
             </li>
           </ul>

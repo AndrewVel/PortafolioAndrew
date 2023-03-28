@@ -53,7 +53,11 @@ const Experience = () => {
         </div>
         <div
           className="glassLanding"
-          style={{ background: darkMode ? "black" : "" }}
+          style={{
+            overflow: "auto",
+            maxHeight: "400px",
+            background: darkMode ? "black" : "",
+          }}
         >
           <p className="textolandig1">
             ¿Alguna vez te has preguntado cómo las tecnologías pueden resolver

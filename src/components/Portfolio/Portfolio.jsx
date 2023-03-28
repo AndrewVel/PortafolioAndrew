@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import "./Portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import FitU from "../../img/fit u.png";
-import CountriesPi from "../../img/COUNTRIES PI.png";
-import RYM from "../../img/RYM.png";
-import Guano from "../../img/GUNAO.png";
+import { lista } from "./lista";
 import { themeContext } from "../../Context";
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
@@ -21,46 +19,40 @@ const Portfolio = () => {
       {/* slider */}
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={2}
         grabCursor={true}
         className="portfolio-slider"
+        navigation={true}
       >
-        <SwiperSlide>
-          <a
-            href="https://final-henry-g6.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={FitU} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https://pi-countries-andrew.up.railway.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={CountriesPi} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https://rick-y-morty-andredev.up.railway.app/home"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={RYM} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.guanoturistico.guano_turistico&hl=es&fbclid=IwAR3LM8cLRugXKOavoEihRHJXie5TqYOnAtq2BHZGQ2pj6e_InDaN7d2e7Lw"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={Guano} alt="" />
-          </a>
-        </SwiperSlide>
+        {lista.map((app) => {
+          return (
+            <SwiperSlide>
+              <img src={app.img} alt="" />
+              <button
+                onClick={() => window.open(app.deploy, "_blank")}
+                className="buttonLinkD"
+              >
+                Deploy
+              </button>
+              <button
+                onClick={() => window.open(app.git, "_blank")}
+                className="buttonLinkG"
+              >
+                GitHub
+              </button>
+              {app.yt ? (
+                <button
+                  onClick={() => window.open(app.yt, "_blank")}
+                  className="buttonLinkV"
+                >
+                  Publicacion
+                </button>
+              ) : (
+                ""
+              )}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );
